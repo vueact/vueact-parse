@@ -11,13 +11,9 @@ const readFile = fileName =>
     })
   )
 
-module.exports = async fileName => {
-  let source
-  try {
-    source = await readFile(fileName)
-  } catch (e) {
-    source = await readFile(`${fileName}.js`)
-  }
+module.exports = async importFileName => {
+  let fileName = /\.js?$/.test(importFileName) ? importFileName : `${importFileName}.js`
+  let source = await readFile(fileName)
   const dependencies = getDependencies(source)
   return {
     fileName,

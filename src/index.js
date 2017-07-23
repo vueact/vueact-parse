@@ -26,9 +26,15 @@ module.exports = async file => {
         resolved: false
       })
     })
-    tree.components[dep.file] = file
+    tree.components[path.relative(path.dirname(tree.entry), dep.file)] = file
     dep.resolved = true
   }
+
+  Object.values(tree.components).forEach(component => {
+    component.fileName = path.relative(path.dirname(tree.entry), component.fileName)
+  })
+
+  tree.entry = path.relative(path.dirname(tree.entry), tree.entry)
 
   delete tree.dependencies
 
