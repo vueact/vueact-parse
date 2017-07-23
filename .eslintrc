@@ -1,0 +1,9 @@
+{
+  "extends": ["plugin:react/recommended", "xo/esnext", "rem"],
+  "globals": {
+    "document": true
+  },
+  "rules": {
+    "no-await-in-loop": 0
+  }
+}
