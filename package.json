@@ -1,0 +1,39 @@
+{
+  "name": "vueact-parse",
+  "version": "0.0.0",
+  "description": "MVVM Parser for vueact",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "ava test/test.js",
+    "vet": "npm run lint && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vueact/vueact-parse.git"
+  },
+  "keywords": [
+    "vue",
+    "react",
+    "vueact"
+  ],
+  "author": "Nick Messing <dot.nick.dot.messing@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vueact/vueact-parse/issues"
+  },
+  "homepage": "https://github.com/vueact/vueact-parse#readme",
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "eslint": "^4.3.0",
+    "eslint-config-rem": "^3.1.0",
+    "eslint-config-xo": "^0.18.2",
+    "eslint-plugin-react": "^7.1.0",
+    "nyc": "^11.0.3"
+  },
+  "dependencies": {
+    "babel-traverse": "^6.25.0",
+    "babylon": "^6.17.4",
+    "command-line-args": "^4.0.6"
+  }
+}
